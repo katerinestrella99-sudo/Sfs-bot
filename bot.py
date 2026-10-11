@@ -1,7 +1,8 @@
+import os
 import logging
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
-TOKEN="8942707911:AAH9-UB39MjksdtMQk2d_reIi3LWzU5QSmI"
+TOKEN=os.environ.get("TOKEN")
 logging.basicConfig(level=logging.INFO)
 async def start(update, context):
  keyboard=[
